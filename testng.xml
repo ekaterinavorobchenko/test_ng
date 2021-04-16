@@ -3,7 +3,11 @@
 <suite name="Suite">
     <test name="Personal loon">
         <classes>
-            <class name="test.day1"/>
+            <class name="test.day1">
+                <methods>
+                    <include name="Demo"/>
+                </methods>
+            </class>
             <class name="test.day2"/>
             <class name="test.day4"/>
         </classes>
@@ -12,9 +16,10 @@
     <test name="Car Loan">
         <classes>
             <class name="test.day3">
-
+                <methods>
+                    <exclude name="MobileLogincarLoan"/>
+                </methods>
             </class>
-
         </classes>
     </test>
 </suite>

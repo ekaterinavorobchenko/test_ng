@@ -11,7 +11,7 @@ public class day3 {
     }
 
     @Test
-    public void Mobilecarloan()
+    public void MobileLogincarLoan()
     {
         //Appium
         System.out.println("Mobilelogincar");
