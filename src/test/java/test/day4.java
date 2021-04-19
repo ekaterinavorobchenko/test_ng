@@ -10,7 +10,7 @@ public class day4 {
         System.out.println("webloginHome");
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void MobileloginHomeLoan()
     {
         //Appium
