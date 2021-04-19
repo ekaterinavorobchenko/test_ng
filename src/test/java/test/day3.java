@@ -31,7 +31,7 @@ public class day3 {
     {
         System.out.println("I am no 1 ");
     }
-    @Test
+    @Test(timeOut = 4000)
     public void MobileSingincarLoan()
     {
         //Appium
@@ -43,7 +43,7 @@ public class day3 {
         //Appium
         System.out.println("Mobile SIGNOUT");
     }
-    @Test
+    @Test(dependsOnMethods = {"Webcarloan","MobileSingoutcarLoan"})
     public void APIcarLoan()
     {
         System.out.println("APIlogincar");
