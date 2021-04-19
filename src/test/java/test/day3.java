@@ -4,17 +4,18 @@ import org.testng.annotations.*;
 
 public class day3 {
     @AfterClass
-    public void befoclass()
+    public void befoclas()
     {
         System.out.println("After executing all methods in the class");
     }
-    @Parameters({"URL"})
+    @Parameters({"URL","APIKey/ursname"})
     @Test
-    public void  Webcarloan(String urlname)
+    public void  Webcarloan(String urlname,String value)
     {
         //selenium
         System.out.println("weblogincar");
         System.out.println(urlname);
+        System.out.println(value);
     }
     @BeforeMethod
     public void beforeevery()
@@ -33,11 +34,13 @@ public class day3 {
     {
         System.out.println("I am no 1 ");
     }
-    @Test(timeOut = 4000)
-    public void MobileSingincarLoan()
+    @Test(dataProvider = "getData")
+    public void MobileSingincarLoan(String username, String password)
     {
         //Appium
         System.out.println("Mobile SIGIN");
+        System.out.println(username);
+        System.out.println(password);
     }
     @Test
     public void MobileSingoutcarLoan()
@@ -49,5 +52,23 @@ public class day3 {
     public void APIcarLoan()
     {
         System.out.println("APIlogincar");
+    }
+    @DataProvider
+    public Object[][] getData()
+    {
+        Object[][] data = new Object[3][2];
+        //1st set
+        data[0][0]="firstsetusername";
+        data[0][1]="password";
+        //2st set
+        data[1][0]="secondsetusename";
+        data[1][1]="secondpassword";
+        //3st set
+        data[2][0]="thirdsetusename";
+        data[2][1]="thirdpassword";
+        return data;
+
+
+
     }
 }
