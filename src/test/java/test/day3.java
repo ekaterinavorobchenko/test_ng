@@ -8,11 +8,13 @@ public class day3 {
     {
         System.out.println("After executing all methods in the class");
     }
+    @Parameters({"URL"})
     @Test
-    public void  Webcarloan()
+    public void  Webcarloan(String urlname)
     {
         //selenium
         System.out.println("weblogincar");
+        System.out.println(urlname);
     }
     @BeforeMethod
     public void beforeevery()
